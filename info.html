@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información del Comprador</title>
+  <link rel="stylesheet" href="Info.css">
+</head>
+<body>
+
+  <h1>Información del Comprador</h1>
+  <form id="buyer-info-form">
+    <label for="buyer-name">Nombre:</label>
+    <input type="text" id="buyer-name" required>
+
+    <label for="buyer-phone">Teléfono:</label>
+    <input type="tel" id="buyer-phone" required>
+
+    <label for="buyer-email">Correo Electrónico:</label>
+    <input type="email" id="buyer-email" required>
+
+    <label for="payment-method">Método de Pago:</label>
+    <select id="payment-method" required>
+      <option value="efectivo">Efectivo</option>
+      <option value="transferencia">Transferencia Bancaria</option>
+    </select>
+
+    <center><button type="button" id="submit-info-btn">Continuar</button></center>
+  </form>
+
+  <div id="confirmation-message"></div>
+
+  <header>
+    <h1>Información del Pedido</h1>
+  </header>
+
+  <main id="order-info">
+    <h2>Resumen del Pedido</h2>
+    <div id="cart-items-container">
+      <!-- Aquí se mostrarán los elementos del carrito -->
+    </div>
+    <div id="cart-total">
+      <p>Total: $<span id="total-amount">0.00</span></p>
+    </div>
+    <a href="Consulta.php">:</a>
+  </main>
+
+  <form id="order-form" >
+    <input type="hidden" name="cart_data" id="cart-data" value="">
+    <input type="hidden" name="buyer_name" id="hidden-buyer-name" value="">
+    <input type="hidden" name="buyer_phone" id="hidden-buyer-phone" value="">
+    <input type="hidden" name="buyer_email" id="hidden-buyer-email" value="">
+    <input type="hidden" name="payment_method" id="hidden-payment-method" value="">
+    <input type="hidden" name="comprador_id" id="hidden-comprador-id" value="...">
+
+  </form>
+  
+
+  <script src="Info.js"></script>
+</body>
+</html>
